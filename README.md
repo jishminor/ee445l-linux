@@ -20,7 +20,7 @@ Tested on OS X. Should work on most GNU/Linux/POSIX environments.
 
 2. In the root directory, run
     ```
-    bash setup.sh
+    $ bash setup.sh
     ```
     to install all dependencies.
 
@@ -29,8 +29,8 @@ Tested on OS X. Should work on most GNU/Linux/POSIX environments.
 Hook up an unlocked TM4C via USB on the debug port (top).
 Move to the TestProject directory then build the project and flash by running:
 ```
-cd TestProject
-make flash
+$ cd TestProject
+$ make flash
 ```
 If all goes correctly, the blue LED should come on and your up and running!
 
@@ -39,15 +39,15 @@ If all goes correctly, the blue LED should come on and your up and running!
 The general workflow for beginning work on a new project is a follows:
 1. Create directory in git root directory corresponding to the lab you are working on (ie lab1, lab2, etc). To use the given gitignore, make sure it is all lower case.
     ```
-    mkdir lab1
+    $ mkdir lab1
     ```
 2. Copy over _Makefile_ from the TestProject directory into the new lab directory.
     ```
-    cp TestProject/Makefile lab1/
+    $ cp TestProject/Makefile lab1/
     ```
 3. Run text editor of choice to modify lab1/Makefile, for example vim
     ```
-    vim lab1/Makefile
+    $ vim lab1/Makefile
     ```
 4. Find the line
     ```
