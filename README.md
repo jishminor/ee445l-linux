@@ -16,13 +16,13 @@ Tested on OS X. Should work on most GNU/Linux/POSIX environments.
 
 ## Installing
 
-Clone this repository into your directory of choice.
+1. Fork this repository then clone your forked copy into your directory of choice locally.
 
-In the root directory, run
-```
-bash setup.sh
-```
-to install all dependencies.
+2. In the root directory, run
+    ```
+    bash setup.sh
+    ```
+    to install all dependencies.
 
 ### Run Test Project
 
