@@ -53,7 +53,7 @@ The general workflow for beginning work on a new project is a follows:
     ```
     PROJ_NAME = TestProject
     ```
-    to
+    and change it to
     ```
     PROJ_NAME = lab1
     ```
