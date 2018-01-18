@@ -2,6 +2,8 @@
 
 A complete repository for writing, compiling and flashing code for the TI Stellaris, along with a sample project. Based on a completely open-source toolchain, without the need to rely on cumbersome development environments.
 
+![TM4C123GXL](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAUoAAAAJDEyNWNhMmY0LWMxZGQtNDBhNC1iYjM2LWE0OTQ5OWQ4ZDA2Ng.jpg)
+
 Tested on OS X. Should work on most GNU/Linux/POSIX environments.
 
 ## Requirements
@@ -25,41 +27,41 @@ to install all dependencies.
 ### Run Test Project
 
 Hook up an unlocked TM4C via usb on the debug port (top).
-Move to the TestProject Directory and attemp to make and flash the board.
+Move to the TestProject directory and build the project then flash the board.
 ```
 cd TestProject
 make flash
 ```
-This should create the object file and flash the board.
 If all goes correctly the blue LED should come on.
 
 ## Working on a New Project
 
 The general workflow for beginning work on a new project is a follows:
 1. Create directory in git root directory corresponding to the lab you are working on (ie lab1, lab2, etc). To use the given gitignore, make sure it is all lower case.
-```
-mkdir lab1
-```
+    ```
+    mkdir lab1
+    ```
 2. Copy over _Makefile_ from the TestProject directory into the new lab directory.
-```
-cp TestProject/Makefile lab1/
-```
+    ```
+    cp TestProject/Makefile lab1/
+    ```
 3. Run text editor of choice to modify lab1/Makefile, for example vim
-```
-vim lab1/Makefile
-```
-4. Change the line
-```
-PROJ_NAME = TestProject
-```
-to
-```
-PROJ_NAME = lab1
-```
+    ```
+    vim lab1/Makefile
+    ```
+4. Find the line
+    ```
+    PROJ_NAME = TestProject
+    ```
+    to
+    ```
+    PROJ_NAME = lab1
+    ```
 5. Add all the starter files you need to the lab1 directory and get coding!
 
 
-The shared directory is great to for placing the modules you write that can be shared across projects.
+**Pro-tip**: The shared directory is great to for placing the modules you write that can be shared across projects.
+There's already a few in there from ValvanoWare which you will find useful through the semester.
 To include files from this directory in your projects just place a
 ```c
 #include shared/your_file.h
