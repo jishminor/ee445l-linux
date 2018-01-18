@@ -26,13 +26,13 @@ Tested on OS X. Should work on most GNU/Linux/POSIX environments.
 
 ### Run Test Project
 
-Hook up an unlocked TM4C via usb on the debug port (top).
-Move to the TestProject directory and build the project then flash the board.
+Hook up an unlocked TM4C via USB on the debug port (top).
+Move to the TestProject directory then build the project and flash by running:
 ```
 cd TestProject
 make flash
 ```
-If all goes correctly the blue LED should come on.
+If all goes correctly, the blue LED should come on and your up and running!
 
 ## Working on a New Project
 
