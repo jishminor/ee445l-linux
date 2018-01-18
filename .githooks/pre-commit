@@ -1,0 +1,46 @@
+#!/bin/sh
+#
+# An example hook script to verify what is about to be committed.
+# Called by "git commit" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message if
+# it wants to stop the commit.
+#
+# To enable this hook, rename this file to "pre-commit".
+
+files=$(git diff HEAD --name-only)
+project_dir=$(git rev-parse --show-toplevel)
+
+brew_install_if_missing () {
+  if ! type brew &> /dev/null ; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
+  if ! type $1 &> /dev/null ; then
+    brew install $1
+  fi
+}
+
+pip3_install_if_missing () {
+  if ! type pip3 &> /dev/null ; then
+    brew_install_if_missing python3
+  fi
+  if ! type $1 &> /dev/null ; then
+    pip3 install $1
+  fi
+}
+
+for file in $files
+do
+  filename=$project_dir/$file
+  if [[ $file == *.py ]]; then
+    pip3_install_if_missing yapf
+    echo "yapf: $filename"
+    yapf --style google --in-place $filename
+  fi
+  if [ $file == *.c ] || [ $file == *.h ] || [ $file == *.cpp  ] || [ $file == *.cc ] || [ $file == *.objc ]; then
+    brew_install_if_missing clang-format
+    echo "clang-format: $filename"
+    clang-format -style=google -i $filename
+  fi
+done
+
+exit 0

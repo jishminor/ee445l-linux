@@ -1,0 +1,22 @@
+# Globally ignore these files.
+*.DS_Store
+*.o
+*.d
+*.swp
+
+# Only add .c, .h, .ld, and Makefiles for projects
+TestProject/*
+!TestProject/Makefile
+!TestProject/*.c
+!TestProject/*.h
+!TestProject/*.ld
+
+lab*/*
+!lab*/Makefile
+!lab*/*.c
+!lab*/*.h
+!lab*/*.py
+
+!shared*/*.c
+!shared*/*.h
+!shared*/*.ld
