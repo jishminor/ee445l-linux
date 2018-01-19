@@ -24,7 +24,7 @@ Tested on OS X. Should work on most GNU/Linux/POSIX environments.
     ```
     to install all dependencies.
 
-### Run Test Project
+## Run Test Project
 
 Hook up an unlocked TM4C via USB on the debug port (top).
 Move to the TestProject directory then build the project and flash by running:
