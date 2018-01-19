@@ -36,7 +36,7 @@ If all goes correctly, the blue LED should come on and your up and running!
 
 ## Working on a New Project
 
-The general workflow for beginning work on a new project is a follows:
+The general workflow for beginning a new project is a follows:
 1. Create directory in git root directory corresponding to the lab you are working on (ie lab1, lab2, etc). To use the given gitignore, make sure it is all lower case.
     ```
     $ mkdir lab1
