@@ -2,7 +2,7 @@
 
 A complete repository for writing, compiling and flashing code for the TI Stellaris, along with a sample project. Based on a completely open-source toolchain, without the need to rely on cumbersome development environments.
 
-![TM4C123GXL](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAUoAAAAJDEyNWNhMmY0LWMxZGQtNDBhNC1iYjM2LWE0OTQ5OWQ4ZDA2Ng.jpg)
+![TM4C123GXL](https://github.com/jishminor/ee445l-linux/blob/master/TivaWare/.metadata/images/TivaWare.png)
 
 Tested on OS X. Should work on most GNU/Linux/POSIX environments.
 
