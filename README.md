@@ -21,23 +21,23 @@ Follow the instructions in the next section to install the required packages.
     1. Create a new github repository and name it to your liking. Make sure it is **Private**.
     2. Open terminal.
     3. Create a bare clone of the repository:
-    ```
-    $ git clone --bare https://github.com/jishminor/ee445l-linux.git
-    ```
+        ```
+        $ git clone --bare https://github.com/jishminor/ee445l-linux.git
+        ```
     4. Mirror push to the new repository made in step i:
-    ```
-    $ cd ee445l-linux.git
-    $ git push --mirror https://github.com/exampleuser/your-repository.git
-    ```
+        ```
+        $ cd ee445l-linux.git
+        $ git push --mirror https://github.com/exampleuser/your-repository.git
+        ```
     5. Remove the temporary local repository you created in step iii:
-    ```
-    $ cd ..
-    $ rm -rf ee445l-linux.git
-    ```
+        ```
+        $ cd ..
+        $ rm -rf ee445l-linux.git
+        ```
     6. Now navigate to a directory of your choice and clone you new repository:
-    ```
-    $ git clone https://github.com/exampleuser/your-repository.git
-    ```
+        ```
+        $ git clone https://github.com/exampleuser/your-repository.git
+        ```
 
 2. In the root directory of your repo, run
     ```
