@@ -25,6 +25,9 @@ brew install gcc-arm-none-eabi
 LINE='export PATH="$PATH:/usr/local/Cellar/arm-gcc-bin/6-2017-q2-update/bin/"'
 grep -qF "$LINE" ~/.bashrc || echo "$LINE" >> ~/.bashrc
 
+#install libusb
+brew install libusb
+
 #get lm4flash
 rm /usr/local/bin/lm4flash
 rm -rf lm4tools
