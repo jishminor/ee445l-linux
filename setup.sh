@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # setup.sh
 # Copyright (C) 2017 Josh Minor <joshminor@utexas.edu>
@@ -25,12 +25,19 @@ brew install gcc-arm-none-eabi
 LINE='export PATH="$PATH:/usr/local/Cellar/arm-gcc-bin/6-2017-q2-update/bin/"'
 grep -qF "$LINE" ~/.bashrc || echo "$LINE" >> ~/.bashrc
 
+#install pkg-config so that lm4flash makefile builds lm4flash
+brew install pkg-config
+
 #install libusb
 brew install libusb
 
 #get lm4flash
-rm /usr/local/bin/lm4flash
-rm -rf lm4tools
+file="/usr/local/bin/lm4flash"
+if [ -f "$file" ]
+then
+  rm "$file"
+  rm -rf lm4tools
+fi
 git clone https://github.com/utzig/lm4tools.git
 cd lm4tools/lm4flash/
 make
