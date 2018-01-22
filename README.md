@@ -23,6 +23,7 @@ Tested on OS X. Should work on most GNU/Linux/POSIX environments.
     $ bash setup.sh
     ```
     to install all dependencies.
+3. If prompted to override rwxr-xr-x  root/admin for /usr/local/bin/lm4flash, enter y and press enter.
 
 ## Run Test Project
 
