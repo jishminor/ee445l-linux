@@ -13,6 +13,7 @@ Tested on OS X. Should work on most GNU/Linux/POSIX environments.
  - [TI Stellaris TM4C123GXL dev board](http://www.ti.com/tool/EK-TM4C123GXL)
  - bash
 
+Follow the instructions in the next section to install the required packages.
 
 ## Installing
 
