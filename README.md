@@ -17,9 +17,29 @@ Follow the instructions in the next section to install the required packages.
 
 ## Installing
 
-1. Fork this repository then clone your forked copy into your directory of choice locally.
+1. Create a duplicate of this repository for you own local development by doing the following:
+    1. Create a new github repository and name it to your liking. Make sure it is **Private**.
+    2. Open terminal.
+    3. Create a bare clone of the repository:
+    ```
+    $ git clone --bare https://github.com/jishminor/ee445l-linux.git
+    ```
+    4. Mirror push to the new repository made in step i:
+    ```
+    $ cd ee445l-linux.git
+    $ git push --mirror https://github.com/exampleuser/your-repository.git
+    ```
+    5. Remove the temporary local repository you created in step iii:
+    ```
+    $ cd ..
+    $ rm -rf ee445l-linux.git
+    ```
+    6. Now navigate to a directory of your choice and clone you new repository:
+    ```
+    $ git clone https://github.com/exampleuser/your-repository.git
+    ```
 
-2. In the root directory, run
+2. In the root directory of your repo, run
     ```
     $ bash setup.sh
     ```
