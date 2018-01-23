@@ -53,6 +53,7 @@ DEFS = -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1
 INC_DIRS = $(addprefix -I, $(TIVAWARE_ROOT))
 INC_DIRS += $(addprefix -I, $(TIVA_DRIVERS))
 INC_DIRS += $(addprefix -I, $(ROOT))
+INC_DIRS += $(addprefix -I, $(ROOT)/shared)
 
 LDFLAGS = -T$(ROOT)/shared/tm4c.ld --entry ResetISR
 
