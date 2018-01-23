@@ -34,7 +34,7 @@ Follow the instructions in the next section to install the required packages.
         $ cd ..
         $ rm -rf ee445l-linux.git
         ```
-    6. Now navigate to a directory of your choice and clone you new repository:
+    6. Now navigate to a directory of your choice and clone your new repository:
         ```
         $ git clone https://github.com/exampleuser/your-repository.git
         ```
