@@ -8,6 +8,8 @@
 # This script sets up the build environment.
 PROJECT_DIR=`pwd -P`
 
+echo WARNING!: This script relies on Homebrew to install packages.
+
 which -s brew
 if [[ $? != 0 ]] ; then
     # Install Homebrew
