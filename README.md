@@ -11,7 +11,6 @@ Tested on OS X. Should work on most GNU/Linux/POSIX environments.
  - [ARM EABI Toolchain Builder](https://github.com/jsnyder/arm-eabi-toolchain)
  - [lm4tools](https://github.com/utzig/lm4tools)
  - [TI Stellaris TM4C123GXL dev board](http://www.ti.com/tool/EK-TM4C123GXL)
- - bash
 
 Follow the instructions in the next section to install the required packages.
 
