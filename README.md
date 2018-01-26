@@ -39,8 +39,14 @@ Follow the instructions in the next section to install the required packages.
         ```
 
 2. In the root directory of your repo, run
+    
+    For OS X:
     ```
     $ bash setup.sh
+    ```
+    For Linux:
+    ```
+    $ bash setup linux.sh
     ```
     to install all dependencies.
 3. If prompted to override rwxr-xr-x  root/admin for /usr/local/bin/lm4flash, enter y and press enter.
