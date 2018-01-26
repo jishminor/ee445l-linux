@@ -42,11 +42,11 @@ Follow the instructions in the next section to install the required packages.
     
     For OS X:
     ```
-    $ bash setup.sh
+    $ bash setup-osx.sh
     ```
     For Linux:
     ```
-    $ bash setup linux.sh
+    $ bash setup-linux.sh
     ```
     to install all dependencies.
 3. If prompted to override rwxr-xr-x  root/admin for /usr/local/bin/lm4flash, enter y and press enter.
