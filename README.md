@@ -4,7 +4,7 @@ A complete repository for writing, compiling and flashing code for the TI Stella
 
 ![TM4C123GXL](https://github.com/jishminor/ee445l-linux/blob/master/TivaWare/.metadata/images/TivaWare.png)
 
-Tested on OS X. Should work on most GNU/Linux/POSIX environments.
+Tested on OS X and Ubuntu 16.04. Should work on most GNU/Linux/POSIX environments.
 
 ## Requirements
 
@@ -102,9 +102,15 @@ $ make
 ```
 
 To flash the TM4C:
-```
-$ make flash
-```
+    
+    For OS X:
+    ```
+    $ make flash
+    ```
+    For Linux:
+    ```
+    $ sudo make flash
+    ```
 
 To clean up the directory:
 ```
