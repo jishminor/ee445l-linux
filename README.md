@@ -103,11 +103,12 @@ $ make
 
 To flash the TM4C:
     
-    For OS X:
+For OS X:
     ```
     $ make flash
     ```
-    For Linux:
+    
+For Linux:
     ```
     $ sudo make flash
     ```
