@@ -87,7 +87,7 @@ The general workflow for beginning a new project is a follows:
 5. Add all the starter files you need to the lab1 directory and get coding!
 
 
-**Good Practice**: The shared directory is great to for placing the modules you write that can be shared across projects.
+**Good Practice**: The shared directory is great for placing the modules you write that can be shared across projects.
 There's already a few in there from ValvanoWare which you will find useful through the semester.
 To include files from this directory in your projects just place a
 ```c
