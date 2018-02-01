@@ -118,6 +118,24 @@ To clean up the directory:
 $ make clean
 ```
 
+### Debugger
+The debugger requires gdb-arm-none-eabi and openocd in addition to the other dependencies. They should also be installed by the install script.  
+
+To start debugging, run the following commands in your project folder:  
+```
+$ sudo make flash
+$ make debug
+```
+
+Then run the following GDB commands:  
+```
+(gdb) target remote localhost:3333
+(gdb) monitor reset halt
+(gdb) load
+```
+It might print an message in the middle, but it seems to not be a problem as long as you flash the board with the project you're debugging beforehand.  
+Now everything is ready to go like a normal GDB session. Set any desired breakpoints and then type `continue` or `c` to continue running the program.  
+
 ## Authors
 
 * **Josh Minor** - [jishminor](https://github.com/jishminor)
