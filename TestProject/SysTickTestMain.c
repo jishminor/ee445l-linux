@@ -28,6 +28,7 @@
 
 // PF2 is an output for debugging
 #include <stdint.h>
+#include <string.h>
 #include "inc/tm4c123gh6pm.h"
 
 #include "shared/PLL.h"
@@ -42,6 +43,8 @@ int main(void) {
   GPIO_PORTF_DEN_R |= 0x04;     // enable digital I/O on PF2
                                 // configure PF2 as GPIO
   GPIO_PORTF_PCTL_R = (GPIO_PORTF_PCTL_R & 0xFFFFF0FF) + 0x00000000;
+  char* a = "testing";
+  strcpy(a, "blah");
   GPIO_PORTF_AMSEL_R = 0;  // disable analog functionality on PF
   while (1) {
     GPIO_PORTF_DATA_R = GPIO_PORTF_DATA_R ^ 0x04;  // toggle PF2

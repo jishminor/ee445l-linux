@@ -23,6 +23,9 @@ brew tap PX4/homebrew-px4
 brew update
 brew install gcc-arm-none-eabi
 
+#install openocd
+brew install openocd
+
 #add toolchain to path if not present
 LINE='export PATH="$PATH:/usr/local/Cellar/arm-gcc-bin/6-2017-q2-update/bin/"'
 grep -qF "$LINE" ~/.bashrc || echo "$LINE" >> ~/.bashrc
