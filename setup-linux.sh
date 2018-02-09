@@ -14,6 +14,8 @@ echo WARNING!: This script relies on apt-get to install packages.
 sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa
 sudo apt-get update
 sudo apt-get install gcc-arm-embedded
+sudo apt-get install gdb-arm-none-eabi
+sudo apt-get install openocd
 
 #install pkg-config so that lm4flash makefile builds lm4flash
 sudo apt-get install pkg-config
