@@ -136,6 +136,15 @@ Then run the following GDB commands:
 It might print an message in the middle, but it seems to not be a problem as long as you flash the board with the project you're debugging beforehand.  
 Now everything is ready to go like a normal GDB session. Set any desired breakpoints and then type `continue` or `c` to continue running the program.  
 
+When your done with your session:
+```
+(gdb) q
+```
+and don't forget to kill openocd:
+```
+sudo pkill openocd
+```
+
 ## Authors
 
 * **Josh Minor** - [jishminor](https://github.com/jishminor)
