@@ -397,7 +397,7 @@ static int16_t _height = ST7735_TFTHEIGHT;
 // and then adds the data to the transmit FIFO.
 // NOTE: These functions will crash or stall indefinitely if
 // the SSI0 module is not initialized and enabled.
-void static writecommand(uint8_t c) {
+static void writecommand(uint8_t c) {
   // wait until SSI0 not busy/transmit FIFO empty
   while ((SSI0_SR_R & SSI_SR_BSY) == SSI_SR_BSY) {
   };
@@ -408,7 +408,7 @@ void static writecommand(uint8_t c) {
   };
 }
 
-void static writedata(uint8_t c) {
+static void writedata(uint8_t c) {
   while ((SSI0_SR_R & SSI_SR_TNF) == 0) {
   };  // wait until transmit FIFO not full
   DC = DC_DATA;
@@ -626,7 +626,7 @@ static const uint8_t Rcmd3[] = {  // Init for 7735R, part 3 (red or green tab)
 
 // Companion code to the above tables.  Reads and issues
 // a series of LCD commands stored in ROM byte array.
-void static commandList(const uint8_t *addr) {
+static void commandList(const uint8_t *addr) {
   uint8_t numCommands, numArgs;
   uint16_t ms;
 
@@ -649,7 +649,7 @@ void static commandList(const uint8_t *addr) {
 }
 
 // Initialization code common to both 'B' and 'R' type displays
-void static commonInit(const uint8_t *cmdList) {
+static void commonInit(const uint8_t *cmdList) {
   ColStart = RowStart = 0;  // May be overridden in init func
 
   SYSCTL_RCGCSSI_R |= 0x01;   // activate SSI0
@@ -746,7 +746,7 @@ void ST7735_InitR(enum initRFlags option) {
 // Pixel colors are sent left to right, top to bottom
 // (same as Font table is encoded; different from regular bitmap)
 // Requires 11 bytes of transmission
-void static setAddrWindow(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1) {
+static void setAddrWindow(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1) {
   writecommand(ST7735_CASET);  // Column addr set
   writedata(0x00);
   writedata(x0 + ColStart);  // XSTART
@@ -764,7 +764,7 @@ void static setAddrWindow(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1) {
 
 // Send two bytes of data, most significant byte first
 // Requires 2 bytes of transmission
-void static pushColor(uint16_t color) {
+static void pushColor(uint16_t color) {
   writedata((uint8_t)(color >> 8));
   writedata((uint8_t)color);
 }

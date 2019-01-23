@@ -27,7 +27,7 @@ TIVA_DRIVERS = $(TIVAWARE_ROOT)/driverlib
 SRCS = $(wildcard $(ROOT)/shared/*.c)
 SRCS += $(TIVAWARE_ROOT)/driverlib/gcc/libdriver.a
 
-WARNING_LEVEL = -Wall
+WARNING_LEVEL = -Wall -Wextra -Wpedantic -Werror -Wno-unused-parameter
 OPTIMIZATION_LEVEL = -O0 # Required for debugging via GDB
 
 LIBS = '$(shell $(CC) $(CFLAGS) -print-file-name=libm.a)'
