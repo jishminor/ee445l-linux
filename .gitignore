@@ -20,6 +20,4 @@ lab*/*
 !shared*/*.c
 !shared*/*.h
 !shared*/*.ld
-
-# Don't check in a copy of ValvanoWare
-shared/valvanoware/*
+ValvanoWare/

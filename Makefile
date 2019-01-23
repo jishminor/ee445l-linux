@@ -7,13 +7,14 @@ DIRS=${wildcard ./lab*}
 
 vware_baseurl=http://edx-org-utaustinx.s3.amazonaws.com/UT601x/
 vware_zipfile=ValvanoWareTM4C123.zip
-vware_destdir=shared/valvanoware
+vware_destdir=ValvanoWare
 
 init::
 	@git config core.hooksPath .githooks
 	@git config core.whitespace cr-at-eol
 	if [ ! -d ${vware_destdir} ];                     \
 	then                                              \
+		echo ${vware_destdir}/ >> .gitignore &&       \
 		curl -O ${vware_baseurl}${vware_zipfile} &&   \
 		unzip ${vware_zipfile} &&                     \
 		mv ${vware_zipfile:.zip=} ${vware_destdir} && \
