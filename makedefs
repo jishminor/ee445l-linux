@@ -23,6 +23,7 @@
 #******************************************************************************
 TIVAWARE_ROOT = $(ROOT)/TivaWare
 TIVA_DRIVERS = $(TIVAWARE_ROOT)/driverlib
+VALVANO_ROOT = $(ROOT)/ValvanoWare
 
 SRCS = $(wildcard $(ROOT)/shared/*.c)
 SRCS += $(TIVAWARE_ROOT)/driverlib/gcc/libdriver.a
@@ -52,6 +53,7 @@ DEFS = -DPART_TM4C123GH6PM -DTARGET_IS_TM4C123_RB1
 
 INC_DIRS = $(addprefix -I, $(TIVAWARE_ROOT))
 INC_DIRS += $(addprefix -I, $(TIVA_DRIVERS))
+INC_DIRS += $(addprefix -I, $(VALVANO_ROOT)
 INC_DIRS += $(addprefix -I, $(ROOT))
 INC_DIRS += $(addprefix -I, $(ROOT)/shared)
 
