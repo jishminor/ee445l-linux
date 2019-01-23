@@ -20,4 +20,3 @@ lab*/*
 !shared*/*.c
 !shared*/*.h
 !shared*/*.ld
-ValvanoWare/
