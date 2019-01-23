@@ -7,8 +7,9 @@ DIRS=${wildcard ./lab*}
 
 init::
 	@git config core.hooksPath .githooks
+	@git config core.whitespace cr-at-eol
 
-all: init	
+all: init
 	@for i in ${DIRS};                  \
 	 do                                 \
 	     if [ -f $${i}/Makefile ];      \
