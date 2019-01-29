@@ -36,8 +36,6 @@ LIBS += '$(shell $(CC) $(CFLAGS) -print-file-name=libc.a)'
 LIBS += '$(shell $(CC) $(CFLAGS) -print-file-name=librdimon.a)'
 LIBS += '$(shell $(CC) $(CFLAGS) -print-libgcc-file-name)'
 
-LINK_LIBS = $(addprefix -L, $(LIBS))
-
 # NOTE: GCC cannot compile the Keil assembly syntax (*.S files in Valvanoware)
 # However, conversion between Keil and GCC syntax is very simple (and you probably won't
 # have to do it). See startup.c functions with `__asm()` in them to see examples of
